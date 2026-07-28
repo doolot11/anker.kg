@@ -1,0 +1,6 @@
+{
+  "name": "ANKER.KG - Строительные материалы",
+  "description": "Интернет-магазин строительных материалов ANKER.KG: металлоконструкции, крепеж, сухие смеси, электротовары, инструменты с доставкой по Бишкеку и Киргизии.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
