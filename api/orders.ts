@@ -7,7 +7,7 @@ import {
   formatPrice,
   getNextOrderId,
   getOrders
-} from './_utils';
+} from './_utils.js'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // CORS Headers
