@@ -16,7 +16,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const { chatId } = req.body || {};
   const targetChatId = chatId || process.env.TELEGRAM_CHAT_ID;
-  const botToken = "8745284079:AAGRH7gKTvyqZfPX1cEQcNsBm553Ss1I0Kk";
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
   if (!botToken) {
     return res.status(500).json({ success: false, error: "TELEGRAM_BOT_TOKEN environment variable is not configured" });
