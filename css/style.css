@@ -830,7 +830,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-img-wrapper {
-  height: 50px;
+  height: 150px;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -841,10 +841,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category-img {
-  max-height: 48px;
+  max-height: 100%;
   width: auto;
   object-fit: contain;
-  opacity: 0.85;
+  /* opacity: 0.95; */
   transition: transform 0.2s, opacity 0.2s;
 }
 

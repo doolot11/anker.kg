@@ -6,6 +6,121 @@
 
 // Products Database with realistic prices in Kyrgyzstani Som (Кыргызский сом / KGS)
 const PRODUCTS_DATA = [
+  // 1 Металлоконструкции
+  {
+    id: 'prod-01',
+    title: 'Анкерные шайбы',
+    category: 'Металлоконструкции',
+    categorySlug: 'metallo',
+    price: 55,
+    oldPrice: null,
+    unit: 'шт.',
+    badge: 'hit',
+    image: 'https://shop.molotok.kg/wp-content/uploads/2022/03/Ankernye-shajby.jpg',
+    description: 'Анкерные шайбы для крепления арматуры и металлических конструкций. Цена зависит от размера.',
+    specs: [
+      { key: 'Арматура', val: 'Ø18–Ø32' },
+      { key: 'Размер шайбы', val: '50×50×14 – 90×90×25 мм' },
+      { key: 'Диаметр отверстия', val: '24–40 мм' },
+      { key: 'Цена', val: '55–160 сом/шт.' }
+    ]
+  },
+
+  {
+    id: 'prod-02',
+    title: 'Ванночки строительные',
+    category: 'Металлоконструкции',
+    categorySlug: 'metallo',
+    price: 50,
+    oldPrice: null,
+    unit: 'шт.',
+    badge: 'new',
+    image: 'https://shop.molotok.kg/wp-content/uploads/2022/03/Vannochk.png',
+    description: 'Используются для сваривания арматуры. Цена зависит от размера.',
+    specs: [
+      { key: 'Арматура', val: 'Ø20–Ø32' },
+      { key: 'Размер', val: '70×70 – 110×100 мм' },
+      { key: 'Толщина металла', val: '6–8 мм' },
+      { key: 'Цена', val: '50–85 сом/шт.' }
+    ]
+  },
+
+  {
+    id: 'prod-03',
+    title: 'Закладные детали с арматурой',
+    category: 'Металлоконструкции',
+    categorySlug: 'metallo',
+    price: 95,
+    oldPrice: null,
+    unit: 'кг.',
+    badge: 'hit',
+    image: 'https://shop.molotok.kg/wp-content/uploads/2022/03/Zakladnye-detali.jpg',
+    description: 'Закладные детали с арматурой для монолитного строительства и железобетонных конструкций.',
+    specs: [
+      { key: 'Материал', val: 'Сталь' },
+      { key: 'Тип', val: 'Закладные детали с арматурой' },
+      { key: 'Цена', val: '95 сом/кг.' },
+      { key: 'Применение', val: 'Монолитное строительство' }
+    ]
+  },
+
+  {
+    id: 'prod-04',
+    title: 'Ограждения лестниц и входных групп',
+    category: 'Металлоконструкции',
+    categorySlug: 'metallo',
+    price: 3650,
+    oldPrice: null,
+    unit: 'м.',
+    badge: 'hit',
+    image: 'https://shop.molotok.kg/wp-content/uploads/2022/03/Ograzhdeniya-lestnits.png',
+    description: 'Металлические ограждения лестниц и входных групп из нержавеющей стали.',
+    specs: [
+      { key: 'Материал', val: 'Нержавеющая сталь' },
+      { key: 'Тип', val: 'Лестничные ограждения' },
+      { key: 'Цена', val: '3650 сом/м.' },
+      { key: 'Назначение', val: 'Лестницы и входные группы' }
+    ]
+  },
+
+  {
+    id: 'prod-05',
+    title: 'Стойка для опалубки 3,5м',
+    category: 'Металлоконструкции',
+    categorySlug: 'metallo',
+    price: 1550,
+    oldPrice: null,
+    unit: 'шт.',
+    badge: 'hit',
+    image: 'https://shop.molotok.kg/wp-content/uploads/2022/03/Stojka-opalubki.jpg',
+    description: 'Телескопическая стойка для поддержки горизонтальных щитов опалубки при возведении перекрытий.',
+    specs: [
+      { key: 'Высота', val: '1.05–3.5 м' },
+      { key: 'Диаметр трубы', val: '60×2 мм / 50×2 мм' },
+      { key: 'Тип', val: 'Телескопическая' },
+      { key: 'Цена', val: '1550 сом/шт.' }
+    ]
+  },
+
+  {
+    id: 'prod-06',
+    title: 'Стойка для опалубки 4,5м',
+    category: 'Металлоконструкции',
+    categorySlug: 'metallo',
+    price: 1760,
+    oldPrice: null,
+    unit: 'шт.',
+    badge: 'new',
+    image: 'https://shop.molotok.kg/wp-content/uploads/2022/03/Stojka-opalubki.jpg',
+    description: 'Телескопическая стойка для поддержки горизонтальных щитов опалубки высотой до 4.5 метров.',
+    specs: [
+      { key: 'Высота', val: '1.05–4.5 м' },
+      { key: 'Диаметр трубы', val: '60×2 мм / 50×2 мм' },
+      { key: 'Тип', val: 'Телескопическая' },
+      { key: 'Цена', val: '1760 сом/шт.' }
+    ]
+  },
+  // 2 Металлоконструкции
   {
     id: 'prod-01',
     title: 'Анкер клиновой высокопрочный M12x100мм HDG',
@@ -24,24 +139,7 @@ const PRODUCTS_DATA = [
       { key: 'Нагрузка на вырыв', val: '18.5 кН' }
     ]
   },
-  {
-    id: 'prod-02',
-    title: 'Закладные детали с арматурой ЗД-1 (А500С)',
-    category: 'Металлоконструкции',
-    categorySlug: 'metallo',
-    price: 95,
-    oldPrice: null,
-    unit: 'кг',
-    badge: 'hit',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&auto=format&fit=crop&q=80',
-    description: 'Закладные изделия по ГОСТ 10922-2012 с приварными анкерными стержнями для монолитного строительства.',
-    specs: [
-      { key: 'Марка стали', val: 'Ст3сп / А500С' },
-      { key: 'Толщина пластины', val: '8-20 мм' },
-      { key: 'Арматурный стержень', val: 'Ø12-Ø25 мм' }
-    ]
-  },
-  {
+    {
     id: 'prod-03',
     title: 'Клей для базальта и теплоизоляции KRAFT Isoblock 25кг',
     category: 'Сухие смеси',
@@ -73,23 +171,6 @@ const PRODUCTS_DATA = [
       { key: 'Размеры', val: '2500x1200 мм' },
       { key: 'Толщина', val: '12.5 мм' },
       { key: 'Площадь листа', val: '3.0 м²' }
-    ]
-  },
-  {
-    id: 'prod-05',
-    title: 'Арматура стальная строительная А500С Ø12мм (6м)',
-    category: 'Металлоконструкции',
-    categorySlug: 'metallo',
-    price: 68,
-    oldPrice: 75,
-    unit: 'м.п.',
-    badge: 'hit',
-    image: 'https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=500&auto=format&fit=crop&q=80',
-    description: 'Горячекатаная арматурная сталь периодического профиля для армирования монолитных железобетонных конструкций.',
-    specs: [
-      { key: 'Диаметр', val: '12 мм' },
-      { key: 'Класс прочности', val: 'А500С' },
-      { key: 'Длина хлыста', val: '6.0 метров' }
     ]
   },
   {
