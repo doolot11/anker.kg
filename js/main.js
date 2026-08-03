@@ -9,7 +9,7 @@ const PRODUCTS_DATA = [
   // 1 Металлоконструкции
   {
     id: 'prod-01',
-    title: 'Анкерные шайбы',
+    title: 'Анкерные шайбы 12',
     category: 'Металлоконструкции',
     categorySlug: 'metallo',
     price: 55,
