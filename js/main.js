@@ -4,6 +4,19 @@
    materials calculator, auth tabs, search engine, and quote requests.
    ========================================================================== */
 
+import { krepezh } from "./krepezh";
+import { electrotovary } from "./products-electrotovary";
+import { gipsokarton } from "./products-gipsokarton";
+import { ingenernaia_santexnika } from "./products-ingenernaia_santexnika";
+import { instrumenty } from "./products-instrumenty";
+import { kraska } from "./products-kraska";
+import { PenaSlikon } from "./products-PenaSlikon";
+import { rasxodnye_materialy } from "./products-rasxodnye_materialy";
+import { setki_sito_provolka } from "./products-setki_sito_provolka";
+import { suxie_stroitelnye_smesi } from "./products-suxie_stroitelnye_smesi";
+import { utepliteli_i_gidroizalasia } from "./products-utepliteli_i_gidroizalasia";
+import { xozinventary } from "./products-xozinventary";
+
 // Products Database with realistic prices in Kyrgyzstani Som (Кыргызский сом / KGS)
 const PRODUCTS_DATA = [
   // 1 Металлоконструкции
@@ -93,7 +106,7 @@ const PRODUCTS_DATA = [
     unit: 'шт.',
     badge: 'hit',
     image: 'https://shop.molotok.kg/wp-content/uploads/2022/03/Stojka-opalubki.jpg',
-    description: 'Телескопическая стойка для поддержки горизонтальных щитов опалубки при возведении перекрытий.',
+    description: 'Стойка  опалубки телескопическая  предназначена для поддержания горизонтальных щитов опалубки при возведении перекрытий и использовании в качестве временных опор при фиксации горизонтальных элементов при монтаже и демонтаже зданий. Размеры конструкции в высоту могут достигать  до 4,9 метра, в зависимости от требований заказчика. Стойки опалубки изготовлены из трубы d60*2,0мм и d50*2,0мм, при этом стойка способна поддерживать конструкции, достигающие в высоту от 1,05 до 4,9 метра. На нашем производстве можно купить опорные стойки под опалубку перекрытия, которые имеют следующие преимущества: универсальность использования – их можно применять в различных строительных и ремонтных работах; легкость и быстрота сборки, установки и демонтажа поддерживающей конструкции; металл при изготовлении используется самого высокого качества российского производства, что дает надежную прочность и жесткость конструкции; покраска изделия ведется методом окунания, придавая изделию высокую коррозийно-стойкость при эксплуатации и хранении; компактность при транспортировке. Цена будет меняться в зависимости от объёма',
     specs: [
       { key: 'Высота', val: '1.05–3.5 м' },
       { key: 'Диаметр трубы', val: '60×2 мм / 50×2 мм' },
@@ -223,7 +236,19 @@ const PRODUCTS_DATA = [
       { key: 'Выход пены', val: 'до 65 литров' },
       { key: 'Температура применения', val: 'от -10°C до +35°C' }
     ]
-  }
+  },
+  ...gipsokarton,
+  ...krepezh,
+  ...kraska,
+  ...rasxodnye_materialy,
+  ...PenaSlikon,
+  ...setki_sito_provolka,
+  ...xozinventary,
+  ...instrumenty,
+  ...electrotovary,
+  ...suxie_stroitelnye_smesi,
+  ...utepliteli_i_gidroizalasia,
+  ...ingenernaia_santexnika, 
 ];
 
 window.productsDatabase = PRODUCTS_DATA;
@@ -238,6 +263,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Render Products Function */
 function renderProducts(productsList) {
+  const TitleCatalog = document.getElementById('categoryTitle');
+
+const categories = [...new Set(productsList.map(i => i.category))];
+
+if (categories.length === 1) {
+  TitleCatalog.innerHTML = `<div>(${categories[0]})</div>`;
+} else {
+  TitleCatalog.innerHTML = '';
+}
+//  const TitleCatalog = document.getElementById('categoryTitle');
+
+// const categories = [...new Set(productsList.map(i => i.category))];
+
+// TitleCatalog.innerHTML = categories.map(category => `
+//   <div>
+//     ${category}
+//   </div>
+// `).join('');
   const container = document.getElementById('productsGrid');
   if (!container) return;
 
@@ -250,7 +293,7 @@ function renderProducts(productsList) {
     `;
     return;
   }
-
+  
   container.innerHTML = productsList.map(product => {
     const isWishlisted = window.cartManager ? window.cartManager.isInWishlist(product.id) : false;
     let badgeHTML = '';
